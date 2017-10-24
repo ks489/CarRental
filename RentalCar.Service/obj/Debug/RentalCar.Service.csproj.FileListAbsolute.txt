@@ -1,0 +1,7 @@
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\RentalCar.Service.dll.config
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\RentalCar.Service.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\RentalCar.Service.pdb
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.csprojResolveAssemblyReference.cache
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.csproj.CoreCompileInputs.cache
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.pdb

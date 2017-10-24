@@ -1,0 +1,46 @@
+USE [TestDatabase]
+GO
+
+/****** Object:  Table [dbo].[Rentals]    Script Date: 24/10/2017 13:20:40 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[Rentals](
+	[RentalNo] [int] NOT NULL,
+	[NumberPlate] [varchar](20) NOT NULL,
+ CONSTRAINT [PK_Rentals] PRIMARY KEY CLUSTERED 
+(
+	[RentalNo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UK_Rentals_NumberPlate] UNIQUE NONCLUSTERED 
+(
+	[NumberPlate] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+ALTER TABLE [dbo].[Rentals]  WITH CHECK ADD  CONSTRAINT [FK_Rentals_NumberPlate] FOREIGN KEY([NumberPlate])
+REFERENCES [dbo].[Vehicles] ([NumberPlate])
+GO
+
+ALTER TABLE [dbo].[Rentals] CHECK CONSTRAINT [FK_Rentals_NumberPlate]
+GO
+
+ALTER TABLE [dbo].[Rentals]  WITH CHECK ADD  CONSTRAINT [FK_Rentals_Rentals] FOREIGN KEY([RentalNo])
+REFERENCES [dbo].[Rentals] ([RentalNo])
+GO
+
+ALTER TABLE [dbo].[Rentals] CHECK CONSTRAINT [FK_Rentals_Rentals]
+GO
+
+

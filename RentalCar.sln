@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalCar.Service", "RentalCar.Service\RentalCar.Service.csproj", "{17EBA063-80CA-436B-8D87-DF4D7C273720}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalCar.Client", "RentalCar.Client\RentalCar.Client.csproj", "{AA1F20AF-31AE-4A2C-9BD7-D57EF10B831C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentalCar.Core", "RentalCar.Core\RentalCar.Core.csproj", "{7504550B-9C20-43E0-A70D-CB8FA1F664B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{17EBA063-80CA-436B-8D87-DF4D7C273720}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17EBA063-80CA-436B-8D87-DF4D7C273720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17EBA063-80CA-436B-8D87-DF4D7C273720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA1F20AF-31AE-4A2C-9BD7-D57EF10B831C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA1F20AF-31AE-4A2C-9BD7-D57EF10B831C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA1F20AF-31AE-4A2C-9BD7-D57EF10B831C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA1F20AF-31AE-4A2C-9BD7-D57EF10B831C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7504550B-9C20-43E0-A70D-CB8FA1F664B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7504550B-9C20-43E0-A70D-CB8FA1F664B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7504550B-9C20-43E0-A70D-CB8FA1F664B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7504550B-9C20-43E0-A70D-CB8FA1F664B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
