@@ -5,3 +5,13 @@ D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Servic
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.csproj.CoreCompileInputs.cache
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.dll
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.pdb
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.ServiceLocation.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.Configuration.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Unity.Wcf.dll
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.ServiceLocation.pdb
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.ServiceLocation.xml
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.xml
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.Configuration.xml
+D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
