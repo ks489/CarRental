@@ -24,31 +24,36 @@ namespace RentalCar.Service.Repositories
         }
         #endregion
         #region Repository Methods
-        public int Create(Vehicle vehicle)
+        public int Create(VehicleDTO vehicle)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Vehicle> Get()
+        public IEnumerable<VehicleDTO> GetAvailable()
         {
-            IEnumerable<Vehicle> list;
+            IEnumerable<VehicleDTO> list;
             using (IDbConnection db = _connection.GetConnection())
             {
-                list = db.Query<Vehicle>("SELECT [TagID], [Name], [Colour], [Enabled], [Removed] FROM Tag ORDER BY LOWER([Name])");
+                string query = "SELECT vehicleid, numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21 FROM vehicle WHERE numberPlate NOT IN (SELECT numberPlate FROM rentals )";
+                list = db.Query<VehicleDTO>(query);
             }
-
             return list;
         }
 
-        public Vehicle Get(string NumberPlate)
+        public VehicleDTO Get(string NumberPlate)
         {
-            IEnumerable<Vehicle> list;
-            using (IDbConnection db = _connection.GetConnection())
-            {
-                list = db.Query<Vehicle>("SELECT [TagID], [Name], [Colour], [Enabled], [Removed] FROM Tag ORDER BY LOWER([Name])");
-            }
+            //var res = conn.Query<dynamic>(query).Select(x => new Tuple<MyBase, MyDerived1, MyDerived2>(new MyBase() { BaseProp = x.BaseProp },
+            //                                                                                               new MyDerived1() { Derived1Prop = x.Derived1Prop },
+            //                                                                                               new MyDerived2() { Derived2Prop = x.Derived2Prop }));
 
-            return list;
+            //IEnumerable<Vehicle> list;
+            //using (IDbConnection db = _connection.GetConnection())
+            //{
+            //    list = db.Query<Vehicle>("SELECT [TagID], [Name], [Colour], [Enabled], [Removed] FROM Tag ORDER BY LOWER([Name])");
+            //}
+
+            //return list;
+            return null;
         }
 
         #endregion

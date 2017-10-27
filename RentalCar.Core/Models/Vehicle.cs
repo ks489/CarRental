@@ -9,6 +9,9 @@ namespace RentalCar.Core.Models
     [DataContract]
     public class Vehicle
     {
+
+        [DataMember]
+        public string VehicleID { get; set; }
         [DataMember]
         public string NumberPlate { get; set; }
         [DataMember]

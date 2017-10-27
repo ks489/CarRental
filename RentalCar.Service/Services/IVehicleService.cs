@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RentalCar.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -14,10 +15,10 @@ namespace RentalCar.Service.Services
         [OperationContract]
         string Test();
         [OperationContract]
-        Vehicle GetVehicle(string numberPlate);
+        VehicleDTO GetVehicle(string numberPlate);
         [OperationContract]
-        IEnumerable<Vehicle> GetAllVehicle();
+        IEnumerable<VehicleDTO> GetAvailableVehicles();
         [OperationContract]
-        int Create(Vehicle vehicle);
+        int Create(VehicleDTO vehicle);
     }
 }

@@ -7,6 +7,7 @@ namespace RentalCar.Core.Enums
 {
     public enum RoadTypes
     {
+        NULL,
         OFF_ROAD,
         DIRT_ROAD,
         NORMAL_ROAD

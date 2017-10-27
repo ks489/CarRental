@@ -5,7 +5,8 @@ using System.Web;
 
 namespace RentalCar.Core.Models
 {
-    public class _2WBike : Vehicle
+    
+    public class V2WBike : Vehicle
     {
         public bool Under21 { get; set; }
 

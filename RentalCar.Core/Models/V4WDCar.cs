@@ -6,13 +6,13 @@ using System.Web;
 
 namespace RentalCar.Core.Models
 {
-    public class _4WDCar : Vehicle
+    public class V4WDCar : Vehicle
     {
-        public RoadTypes Road { get; set; }
+        public RoadTypes RoadType { get; set; }
 
         public string Which_Road()
         {
-            return string.Format("Road: {0}", Road.ToString());
+            return string.Format("Road: {0}", RoadType.ToString());
         }
     }
 }

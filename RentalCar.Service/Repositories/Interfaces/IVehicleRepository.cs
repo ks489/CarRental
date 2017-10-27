@@ -8,9 +8,9 @@ namespace RentalCar.Service.Repositories.Interfaces
 {
     public interface IVehicleRepository
     {
-        IEnumerable<Vehicle> Get();
-        Vehicle Get(string NumberPlate);
-        int Create(Vehicle vehicle);
+        IEnumerable<VehicleDTO> GetAvailable();
+        VehicleDTO Get(string NumberPlate);
+        int Create(VehicleDTO vehicle);
 
     }
 }

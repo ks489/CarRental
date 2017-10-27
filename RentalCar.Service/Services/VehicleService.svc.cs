@@ -35,17 +35,17 @@ namespace RentalCar.Service.Services
         {
             return "Hello World";
         }
-        public int Create(Vehicle vehicle)
+        public int Create(VehicleDTO vehicle)
         {
             return _vehicleRepository.Create(vehicle);
         }
 
-        public IEnumerable<Vehicle> GetAllVehicle()
+        public IEnumerable<VehicleDTO> GetAvailableVehicles()
         {
-            return _vehicleRepository.Get();
+            return _vehicleRepository.GetAvailable();
         }
 
-        public Vehicle GetVehicle(string numberPlate)
+        public VehicleDTO GetVehicle(string numberPlate)
         {
             return _vehicleRepository.Get(numberPlate);
         }

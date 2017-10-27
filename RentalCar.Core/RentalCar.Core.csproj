@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Enums\RoadTypes.cs" />
-    <Compile Include="Models\2WBike.cs" />
-    <Compile Include="Models\4WDCar.cs" />
+    <Compile Include="Enums\VehicleTypes.cs" />
+    <Compile Include="Models\V2WBike.cs" />
+    <Compile Include="Models\V4WDCar.cs" />
     <Compile Include="Models\Campervan.cs" />
     <Compile Include="Models\Vehicle.cs" />
+    <Compile Include="Models\VehicleDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
