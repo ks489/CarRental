@@ -1,0 +1,13 @@
+INSERT INTO vehicle  (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (1, 'VG60HLD', 11453.22, 29.99, '4WDCar', NULL, NULL, 'OFF_ROAD', NULL)
+INSERT INTO vehicle  (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (2, 'JJ54DER', 55101.33, 20.45, '4WDCar', NULL, NULL, 'DIRT_ROAD', NULL)
+INSERT INTO vehicle (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (3, 'NH60', 33121.11, 39.45, '4WDCar', NULL, NULL, 'NORMAL_ROAD', NULL)
+INSERT INTO vehicle (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (4, 'KL62FFH', 68878.56, 19.59, '2WBike', NULL, NULL, NULL, 1)
+INSERT INTO vehicle (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (5, 'HH60EDF', 5003.01, 89.99, 'Campervan', 1, 4, NULL, NULL)
+INSERT INTO vehicle (vehicleid, numberPlate, currentMilage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) VALUES (6, 'UU23KIU', 2001.23, 79.99, 'Campervan', 0, 2, NULL, NULL)
+
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (1, 'VG60HLD')
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (2, 'JJ54DER')
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (3, 'NH60')
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (4, 'KL62FFH')
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (5, 'HH60EDF')
+INSERT INTO rentals (rentalNo, numberPlate) VALUES (6, 'UU23KIU')
