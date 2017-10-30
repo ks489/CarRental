@@ -1,9 +1,4 @@
-﻿using RentalCar.Client.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace RentalCar.Client
 {
@@ -11,8 +6,8 @@ namespace RentalCar.Client
     {
         static void Main(string[] args)
         {
-            VehicleService service = new VehicleService();
-            var items = service.GetAvailableVehicles();
+            RentalClient rc = new RentalClient();
+            
             Console.ReadKey();
         }
     }

@@ -42,18 +42,17 @@ namespace RentalCar.Service.Repositories
 
         public VehicleDTO Get(string NumberPlate)
         {
-            //var res = conn.Query<dynamic>(query).Select(x => new Tuple<MyBase, MyDerived1, MyDerived2>(new MyBase() { BaseProp = x.BaseProp },
-            //                                                                                               new MyDerived1() { Derived1Prop = x.Derived1Prop },
-            //                                                                                               new MyDerived2() { Derived2Prop = x.Derived2Prop }));
+            VehicleDTO vehicle = null;
+            using (IDbConnection db = _connection.GetConnection())
+            {
+                DynamicParameters parameter = new DynamicParameters();
+                string query = "SELECT vehicleid, numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21 FROM vehicle WHERE numberPlate = @numberPlate";
+                parameter.Add("@numberPlate", NumberPlate, DbType.String, ParameterDirection.Input);
+                vehicle = db.QueryFirst<VehicleDTO>(query, parameter);
 
-            //IEnumerable<Vehicle> list;
-            //using (IDbConnection db = _connection.GetConnection())
-            //{
-            //    list = db.Query<Vehicle>("SELECT [TagID], [Name], [Colour], [Enabled], [Removed] FROM Tag ORDER BY LOWER([Name])");
-            //}
+            }
 
-            //return list;
-            return null;
+            return vehicle;
         }
 
         #endregion

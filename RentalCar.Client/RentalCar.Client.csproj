@@ -50,10 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\ConsoleHelper.cs" />
+    <Compile Include="Helpers\ModelDeserializer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RentalClient.cs" />
-    <Compile Include="Services\VehicleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
