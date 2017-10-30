@@ -48,7 +48,8 @@ namespace RentalCar.Service.Repositories
                 DynamicParameters parameter = new DynamicParameters();
                 string query = "SELECT vehicleid, numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21 FROM vehicle WHERE numberPlate = @numberPlate";
                 parameter.Add("@numberPlate", NumberPlate, DbType.String, ParameterDirection.Input);
-                vehicle = db.QueryFirst<VehicleDTO>(query, parameter);
+                vehicle = db.QueryFirstOrDefault<VehicleDTO>(query, parameter);
+                
 
             }
 

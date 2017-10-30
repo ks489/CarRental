@@ -48,12 +48,13 @@ namespace RentalCar.Client
                         ConsoleHelper.PrintLine("Enter the vehicle's number plate");
                         string numberplate = ConsoleHelper.GetUserInput();
                         var vehicle =_vehicleService.GetVehicle(numberplate);
-                        StringBuilder vehicleInformation = PrintVehicleInformation(vehicle);
-                        ConsoleHelper.PrintLine(vehicleInformation.ToString());
-
-
-
-
+                        if(vehicle == null)
+                        {
+                            ConsoleHelper.PrintLine("No Vehicle Found.");
+                            return;
+                        }
+                        List<string> vehicleInformation = PrintVehicleInformation(vehicle);
+                        ConsoleHelper.PrintLine(vehicleInformation);
                         break;
                     }
                 case "b":
@@ -83,9 +84,9 @@ namespace RentalCar.Client
             return false;
         }
 
-        private StringBuilder PrintVehicleInformation(VehicleDTO vehicle)
+        private List<string> PrintVehicleInformation(VehicleDTO vehicle)
         {
-            StringBuilder information = new StringBuilder();
+            List<string> information = new List<string>();
             if (vehicle.VehicleType == Core.Enums.VehicleTypes.Campervan)
             {
                 var campervan = new Campervan()
@@ -97,8 +98,8 @@ namespace RentalCar.Client
                     RentalCharge = vehicle.RentalCharge,
                     Toilet = vehicle.Toilet
                 };
-                information.Append(campervan.Get_Basic_Information());
-                information.Append(campervan.Get_Equipment());
+                information.Add(campervan.Get_Basic_Information());
+                information.Add(campervan.Get_Equipment());
             }
             else if(vehicle.VehicleType == Core.Enums.VehicleTypes.V2WBike)
             {
@@ -110,8 +111,8 @@ namespace RentalCar.Client
                     RentalCharge = vehicle.RentalCharge,
                     Under21 = vehicle.Under21
                 };
-                information.Append(bike.Get_Basic_Information());
-                information.Append(bike.Under21_Ok());
+                information.Add(bike.Get_Basic_Information());
+                information.Add(bike.Under21_Ok());
             }
             else if (vehicle.VehicleType == Core.Enums.VehicleTypes.V4WDCar)
             {
@@ -123,8 +124,8 @@ namespace RentalCar.Client
                     RentalCharge = vehicle.RentalCharge,
                     RoadType = vehicle.RoadType
                 };                
-                information.Append(car.Get_Basic_Information());
-                information.Append(car.Which_Road());
+                information.Add(car.Get_Basic_Information());
+                information.Add(car.Which_Road());
 
             }
             
