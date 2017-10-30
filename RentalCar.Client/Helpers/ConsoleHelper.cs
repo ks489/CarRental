@@ -44,29 +44,40 @@ namespace RentalCar.Client.Helpers
             string currentMileage = LoopNonNullInput("Vehicle Current Mileage:");
             string rentalCharge = LoopNonNullInput("Vehicle Rental Charge:");
 
+            string toilet = null;
+            string numberOfBeds = null;
+            string roadType = null;
+            string under21 = null;
 
             Dictionary<string, string> choices = new Dictionary<string, string>();
             choices.Add("1", "Campervan");
             choices.Add("2", "Bike");
             choices.Add("3", "Car");
             string vehicleType = LoopNonNullInput("Vehicle Vehicle Type:", choices);
-             
-            //string numberPlate = LoopInput("Vehicle Number Plate:");
-            //string numberPlate = LoopInput("Vehicle Number Plate:");
-            //string numberPlate = LoopInput("Vehicle Number Plate:");
-            //string numberPlate = LoopInput("Vehicle Number Plate:");
-
-
-            //PrintLine("Vehicle Vehicle Type:");
-            //PrintLine("Select one of the following below");
-            //PrintLine("(1) - Campervan");
-            //PrintLine("(2) - Bike");
-            //PrintLine("(3) - Car");
-            //string vehicleType = GetUserInput();
-            //PrintLine("Vehicle Current Mileage:");
-            //string currentMileage = GetUserInput();
-            //PrintLine("Vehicle Current Mileage:");
-            //string currentMileage = GetUserInput();
+            if (vehicleType.ToLower().Equals("1"))
+            {
+                Dictionary<string, string> toiletChoices = new Dictionary<string, string>();
+                toiletChoices.Add("true", "Has Toilet");
+                toiletChoices.Add("false", "No Toilet");                
+                toilet = LoopNonNullInput("Vehicle Toilet:");
+                numberOfBeds = LoopNonNullInput("Number of Beds");
+            }
+            else if (vehicleType.ToLower().Equals("2"))
+            {
+                Dictionary<string, string> under21Choices = new Dictionary<string, string>();
+                under21Choices.Add("true", "Under 21");
+                under21Choices.Add("false", "20 and Over");
+                under21 = LoopNonNullInput("Vehicle Under 21:");
+            }
+            else if (vehicleType.ToLower().Equals("3"))
+            {
+                Dictionary<string, string> roadTypesChoices = new Dictionary<string, string>();
+                roadTypesChoices.Add("1", "Off Roads");
+                roadTypesChoices.Add("2", "First Roads");
+                roadTypesChoices.Add("3", "Normal Roads");
+                roadType = LoopNonNullInput("Vehicle Road Type:");
+            }
+            List<string> vehicleDetails = new List<string>();
         }
 
         public static string LoopNonNullInput(string displayMessage, Dictionary<string, string> allowableValues = null)

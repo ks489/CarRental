@@ -129,6 +129,6 @@ namespace RentalCar.Client
             }
             
             return information;
-        }
+        }        
     }
 }
