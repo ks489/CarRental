@@ -85,7 +85,7 @@ namespace RentalCar.Client
 
         private StringBuilder PrintVehicleInformation(VehicleDTO vehicle)
         {
-            StringBuilder information = null;
+            StringBuilder information = new StringBuilder();
             if (vehicle.VehicleType == Core.Enums.VehicleTypes.Campervan)
             {
                 var campervan = new Campervan()
@@ -122,10 +122,10 @@ namespace RentalCar.Client
                     NumberPlate = vehicle.NumberPlate,
                     RentalCharge = vehicle.RentalCharge,
                     RoadType = vehicle.RoadType
-                };
-                information.Append(car.Which_Road());
+                };                
                 information.Append(car.Get_Basic_Information());
-                
+                information.Append(car.Which_Road());
+
             }
             
             return information;
