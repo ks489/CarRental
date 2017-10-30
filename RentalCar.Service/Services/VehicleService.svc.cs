@@ -2,12 +2,7 @@
 using RentalCar.Service.Infrastructure;
 using RentalCar.Service.Repositories;
 using RentalCar.Service.Repositories.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
 
 namespace RentalCar.Service.Services
 {
@@ -31,10 +26,7 @@ namespace RentalCar.Service.Services
         #endregion
 
         #region Service Methods
-        public string Test()
-        {
-            return "Hello World";
-        }
+        public string Test() => "Hello World";
         public int Create(VehicleDTO vehicle)
         {
             return _vehicleRepository.Create(vehicle);

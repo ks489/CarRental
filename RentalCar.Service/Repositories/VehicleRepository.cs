@@ -1,10 +1,7 @@
 ﻿using RentalCar.Service.Infrastructure.Interfaces;
 using RentalCar.Service.Repositories.Interfaces;
-using RentalCar.Service.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using RentalCar.Core.Models;
 using System.Data;
 using Dapper;
