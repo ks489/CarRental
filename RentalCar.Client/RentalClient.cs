@@ -49,8 +49,7 @@ namespace RentalCar.Client
                             ConsoleHelper.PrintLine("Enter the vehicle's number plate");
                             string numberplate = ConsoleHelper.GetUserInput();
 
-                            //var vehicle = _searchVehicle.Get(numberplate);
-                            var vehicle =_vehicleService.GetVehicle(numberplate);
+                            var vehicle = _searchVehicle.Get(numberplate);
 
                             if (vehicle == null)
                             {

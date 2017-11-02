@@ -5,8 +5,10 @@
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
  xmlns:p="http://tempuri.org/"
  xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:rwm="clr-namespace:RentalCar.Workflow.MyRentalCarService;assembly=RentalCar.Workflow"
- xmlns:rwma="clr-namespace:RentalCar.Workflow.MyRentalCarService.Activities;assembly=RentalCar.Workflow"
+ xmlns:rwm="clr-namespace:RentalCar.Workflow.MyUppercaseOperatorService;assembly=RentalCar.Workflow"
+ xmlns:rwm1="clr-namespace:RentalCar.Workflow.MyRentalCarService;assembly=RentalCar.Workflow"
+ xmlns:rwma="clr-namespace:RentalCar.Workflow.MyUppercaseOperatorService.Activities;assembly=RentalCar.Workflow"
+ xmlns:rwma1="clr-namespace:RentalCar.Workflow.MyRentalCarService.Activities;assembly=RentalCar.Workflow"
  xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
  xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
  xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
@@ -53,7 +55,7 @@
     <p1:Sequence.Variables>
       <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
       <p1:Variable x:TypeArguments="x:Int32" Name="data" />
-      <p1:Variable x:TypeArguments="rwm:VehicleDTO" Name="vehicleData" />
+      <p1:Variable x:TypeArguments="rwm1:VehicleDTO" Name="vehicleData" />
       <p1:Variable x:TypeArguments="x:String" Name="numberPlate" />
     </p1:Sequence.Variables>
     <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="Get" ServiceContractName="p:IService">
@@ -72,40 +74,54 @@
         </p1:OutArgument>
       </ReceiveParametersContent>
     </Receive>
-    <rwma:GetVehicle sap2010:WorkflowViewState.IdRef="GetVehicle_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
-      <rwma:GetVehicle.GetVehicleResult>
-        <p1:OutArgument x:TypeArguments="rwm:VehicleDTO">
-          <mca:CSharpReference x:TypeArguments="rwm:VehicleDTO">vehicleData</mca:CSharpReference>
+    <rwma:upper mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <rwma:upper._return>
+        <p1:OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">numberPlate</mca:CSharpReference>
         </p1:OutArgument>
-      </rwma:GetVehicle.GetVehicleResult>
-      <rwma:GetVehicle.numberPlate>
+      </rwma:upper._return>
+      <rwma:upper.str>
         <p1:InArgument x:TypeArguments="x:String">
           <mca:CSharpValue x:TypeArguments="x:String">numberPlate</mca:CSharpValue>
         </p1:InArgument>
-      </rwma:GetVehicle.numberPlate>
-    </rwma:GetVehicle>
+      </rwma:upper.str>
+      <sap2010:WorkflowViewState.IdRef>upper_1</sap2010:WorkflowViewState.IdRef>
+    </rwma:upper>
+    <rwma1:GetVehicle sap2010:WorkflowViewState.IdRef="GetVehicle_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+      <rwma1:GetVehicle.GetVehicleResult>
+        <p1:OutArgument x:TypeArguments="rwm1:VehicleDTO">
+          <mca:CSharpReference x:TypeArguments="rwm1:VehicleDTO">vehicleData</mca:CSharpReference>
+        </p1:OutArgument>
+      </rwma1:GetVehicle.GetVehicleResult>
+      <rwma1:GetVehicle.numberPlate>
+        <p1:InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">numberPlate</mca:CSharpValue>
+        </p1:InArgument>
+      </rwma1:GetVehicle.numberPlate>
+    </rwma1:GetVehicle>
     <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap2010:WorkflowViewState.IdRef="SendReply_1">
       <SendParametersContent>
-        <p1:InArgument x:TypeArguments="rwm:VehicleDTO" x:Key="returnVehicle">
-          <mca:CSharpValue x:TypeArguments="rwm:VehicleDTO">vehicleData</mca:CSharpValue>
+        <p1:InArgument x:TypeArguments="rwm1:VehicleDTO" x:Key="returnVehicle">
+          <mca:CSharpValue x:TypeArguments="rwm1:VehicleDTO">vehicleData</mca:CSharpValue>
         </p1:InArgument>
       </SendParametersContent>
     </SendReply>
-    <sads:DebugSymbol.Symbol>d0pEOlxQcm9qZWN0c1xPdGhlclxSZW50YWxDYXIuU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3dcU2VhcmNoVmVoaWNsZS54YW1seAkSA18RAQE7BUoPAR1LBVYXARJXBV0RAQJHC0dcASNAD0BcAR5OC05iARhTC1NUARNaC1paAQM=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0pEOlxQcm9qZWN0c1xPdGhlclxSZW50YWxDYXIuU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3dcU2VhcmNoVmVoaWNsZS54YW1seAwUA24RAQE9BUwPAShNBVkSAR1aBWUYARJmBWwRAQJJC0lcAS5CD0JcASlVC1VUASNQC1BcAR5dC11jARhiC2JUARNpC2lbAQM=</sads:DebugSymbol.Symbol>
   </p1:Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
       <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="255,90" />
+      <sap2010:ViewStateData Id="upper_1" sap:VirtualizedContainerService.HintSize="255,22" />
       <sap2010:ViewStateData Id="GetVehicle_1" sap:VirtualizedContainerService.HintSize="255,22" />
       <sap2010:ViewStateData Id="SendReply_1" sap:VirtualizedContainerService.HintSize="255,90" />
-      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="277,406">
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="277,468">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="307,476" />
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="307,538" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </WorkflowService>
