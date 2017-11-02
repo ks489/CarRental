@@ -38,3 +38,4 @@ D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFi
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFiles\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.cs
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFiles\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.xaml
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFiles\_RentalCar.Workflow.g.cs
+D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.csprojResolveAssemblyReference.cache

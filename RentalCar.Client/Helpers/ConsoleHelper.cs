@@ -1,4 +1,5 @@
 ﻿using RentalCar.Core.Enums;
+using RentalCar.Core.Models;
 using System;
 using System.Collections.Generic;
 
@@ -35,7 +36,7 @@ namespace RentalCar.Client.Helpers
             }            
         }
 
-        public static List<string> NewVehicleMenu()
+        public static VehicleDTO NewVehicleMenu()
         {
             PrintLine("Enter the new Vehicle's details");
             
@@ -77,8 +78,18 @@ namespace RentalCar.Client.Helpers
                 roadTypesChoices.Add("3", "Normal Roads");
                 roadType = LoopNonNullInput("Vehicle Road Type:");
             }
-            List<string> vehicleDetails = new List<string>();
-            return null;
+            VehicleDTO vehicle = new VehicleDTO()
+            {
+                CurrentMileage = currentMileage == null ? 0 : Double.Parse(currentMileage),
+                NumberOfBeds = Int32.Parse(numberOfBeds),
+                NumberPlate = numberPlate,
+                RentalCharge = Decimal.Parse(rentalCharge),
+                RoadType = (RoadTypes)Enum.Parse(typeof(RoadTypes), roadType),
+                Toilet = bool.Parse(toilet),
+                Under21 = bool.Parse(under21),
+                VehicleType = (VehicleTypes)Enum.Parse(typeof(VehicleTypes), vehicleType)
+            };
+            return vehicle;
         }
 
         public static string LoopNonNullInput(string displayMessage, Dictionary<string, string> allowableValues = null)

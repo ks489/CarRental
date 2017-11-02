@@ -10,11 +10,13 @@ namespace RentalCar.Client
         #region Private Variables
         MyVehicleService.IVehicleService _vehicleService;
         MySearchVehicleWorkFlow.IService _searchVehicle;
+        MyAddVehicleWorkFlow.IService _addVehicle;
         #endregion
         public RentalClient()
         {
             _vehicleService = new MyVehicleService.VehicleServiceClient();
             _searchVehicle = new MySearchVehicleWorkFlow.ServiceClient();
+            _addVehicle = new MyAddVehicleWorkFlow.ServiceClient();
             RunApplication();
         }
 
@@ -50,7 +52,7 @@ namespace RentalCar.Client
                             string numberplate = ConsoleHelper.GetUserInput();
 
                             var vehicle = _searchVehicle.Get(numberplate);
-
+                            
                             if (vehicle == null)
                             {
                                 ConsoleHelper.PrintLine("No Vehicle Found.");
@@ -62,8 +64,8 @@ namespace RentalCar.Client
                         }
                     case "b":
                         {
-                            List<string> userInputList = ConsoleHelper.NewVehicleMenu();
-
+                            VehicleDTO vehicle = ConsoleHelper.NewVehicleMenu();
+                            string lol = "";
                             break;
                         }
                     case "c":
