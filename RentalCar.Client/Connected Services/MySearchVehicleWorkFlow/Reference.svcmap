@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7649e044-def4-4960-8cd6-af5167abf89e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17579/SearchVehicle.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SearchVehicle.xsd" MetadataType="Schema" ID="27f27eb7-d701-485e-89fc-b7de319adc20" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?xsd=xsd2" />
+    <MetadataFile FileName="SearchVehicle1.xsd" MetadataType="Schema" ID="cb5d9581-998b-42c8-95b9-734bc188380d" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?xsd=xsd1" />
+    <MetadataFile FileName="SearchVehicle.disco" MetadataType="Disco" ID="c376c357-768b-4894-9998-83f0dcaa41f0" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?disco" />
+    <MetadataFile FileName="SearchVehicle2.xsd" MetadataType="Schema" ID="2ac8a95e-3a4c-45b2-8c80-d29f07d78848" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="SearchVehicle3.xsd" MetadataType="Schema" ID="80d418f7-5c91-43ae-93bc-2e46cd4b7e8c" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?xsd=xsd3" />
+    <MetadataFile FileName="SearchVehicle.wsdl" MetadataType="Wsdl" ID="b11d5cb4-0c83-4959-97cc-f9da585bdc88" SourceId="1" SourceUrl="http://localhost:17579/SearchVehicle.xamlx?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

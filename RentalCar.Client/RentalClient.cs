@@ -9,10 +9,12 @@ namespace RentalCar.Client
     {
         #region Private Variables
         MyVehicleService.IVehicleService _vehicleService;
+        MySearchVehicleWorkFlow.IService _searchVehicle;
         #endregion
         public RentalClient()
         {
             _vehicleService = new MyVehicleService.VehicleServiceClient();
+            _searchVehicle = new MySearchVehicleWorkFlow.ServiceClient();
             RunApplication();
         }
 
@@ -37,39 +39,50 @@ namespace RentalCar.Client
 
         private void RunCommand(string command)
         {
-            command = command.ToLower();
-            switch (command)
+            try
             {
-                case "a":
-                    {
-                        ConsoleHelper.PrintLine("Enter the vehicle's number plate");
-                        string numberplate = ConsoleHelper.GetUserInput();
-                        var vehicle =_vehicleService.GetVehicle(numberplate);
-                        if(vehicle == null)
+                command = command.ToLower();
+                switch (command)
+                {
+                    case "a":
                         {
-                            ConsoleHelper.PrintLine("No Vehicle Found.");
-                            return;
-                        }
-                        List<string> vehicleInformation = PrintVehicleInformation(vehicle);
-                        ConsoleHelper.PrintLine(vehicleInformation);
-                        break;
-                    }
-                case "b":
-                    {
-                        List<string> userInputList = ConsoleHelper.NewVehicleMenu();
+                            ConsoleHelper.PrintLine("Enter the vehicle's number plate");
+                            string numberplate = ConsoleHelper.GetUserInput();
 
-                        break;
-                    }
-                case "c":
-                    {
-                        break;
-                    }
-                default:
-                    {
-                        ConsoleHelper.PrintLine(string.Format("The command : {0} is not a valid command. Please try again", command));
-                        break;
-                    }
-                    
+                            //var vehicle = _searchVehicle.Get(numberplate);
+                            var vehicle =_vehicleService.GetVehicle(numberplate);
+
+                            if (vehicle == null)
+                            {
+                                ConsoleHelper.PrintLine("No Vehicle Found.");
+                                return;
+                            }
+                            List<string> vehicleInformation = PrintVehicleInformation(vehicle);
+                            ConsoleHelper.PrintLine(vehicleInformation);
+                            break;
+                        }
+                    case "b":
+                        {
+                            List<string> userInputList = ConsoleHelper.NewVehicleMenu();
+
+                            break;
+                        }
+                    case "c":
+                        {
+                            break;
+                        }
+                    default:
+                        {
+                            ConsoleHelper.PrintLine(string.Format("The command : {0} is not a valid command. Please try again", command));
+                            break;
+                        }
+
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e);
             }
         }
 

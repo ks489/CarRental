@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<this:GetAvailableVehicles this:EndpointConfigurationName="BasicHttpBinding_IVehicleService" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:rwm="clr-namespace:RentalCar.Workflow.MyRentalCarService;assembly=RentalCar.Workflow" xmlns:rwm1="clr-namespace:RentalCar.Workflow.MyRentalCarService;assembly=RentalCar.Workflow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:srs="clr-namespace:System.Runtime.Serialization;assembly=System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" xmlns:this="clr-namespace:RentalCar.Workflow.MyRentalCarService.Activities;assembly=RentalCar.Workflow" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <this:GetAvailableVehicles.Implementation>
+    <Sequence>
+      <Sequence.Variables>
+        <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+      </Sequence.Variables>
+      <p1:Send x:Name="__ReferenceID0" Action="http://tempuri.org/IVehicleService/GetAvailableVehicles" OperationName="GetAvailableVehicles" ServiceContractName="p:IVehicleService">
+        <p1:Send.CorrelationInitializers>
+          <p1:RequestReplyCorrelationInitializer>
+            <p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+              <InArgument x:TypeArguments="p1:CorrelationHandle">
+                <VariableValue x:TypeArguments="p1:CorrelationHandle">
+                  <VariableValue.Variable>
+                    <Variable x:TypeArguments="p1:CorrelationHandle" x:Name="__ReferenceID2" />
+                  </VariableValue.Variable>
+                </VariableValue>
+              </InArgument>
+            </p1:RequestReplyCorrelationInitializer.CorrelationHandle>
+          </p1:RequestReplyCorrelationInitializer>
+        </p1:Send.CorrelationInitializers>
+        <p1:SendMessageContent>
+          <InArgument x:TypeArguments="rwm:GetAvailableVehiclesRequest">[New RentalCar.Workflow.MyRentalCarService.GetAvailableVehiclesRequest()]</InArgument>
+        </p1:SendMessageContent>
+        <p1:Send.EndpointConfigurationName>
+          <PropertyReference x:TypeArguments="x:String" PropertyName="EndpointConfigurationName" />
+        </p1:Send.EndpointConfigurationName>
+      </p1:Send>
+      <p1:ReceiveReply Request="{x:Reference __ReferenceID0}" Action="http://tempuri.org/IVehicleService/GetAvailableVehiclesResponse">
+        <p1:ReceiveMessageContent>
+          <OutArgument x:TypeArguments="rwm:GetAvailableVehiclesResponse">
+            <VariableReference x:TypeArguments="rwm:GetAvailableVehiclesResponse">
+              <VariableReference.Variable>
+                <Variable x:TypeArguments="rwm:GetAvailableVehiclesResponse" x:Name="__ReferenceID1" Name="tempResult_1417f02a8cc843bcb9f43d72595b0cb2" />
+              </VariableReference.Variable>
+            </VariableReference>
+          </OutArgument>
+        </p1:ReceiveMessageContent>
+      </p1:ReceiveReply>
+      <Assign>
+        <Assign.To>
+          <OutArgument x:TypeArguments="rwm:VehicleDTO[]">[GetAvailableVehiclesResult]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="rwm:VehicleDTO[]">[tempResult_1417f02a8cc843bcb9f43d72595b0cb2.GetAvailableVehiclesResult]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <sads:DebugSymbol.Symbol>d6wBRDpcUHJvamVjdHNcT3RoZXJcUmVudGFsQ2FyLlNlcnZpY2VcUmVudGFsQ2FyLldvcmtmbG93XFNlcnZpY2UgUmVmZXJlbmNlc1xNeVJlbnRhbENhclNlcnZpY2VcUmVudGFsQ2FyLldvcmtmbG93Lk15UmVudGFsQ2FyU2VydmljZS5JVmVoaWNsZVNlcnZpY2UuR2V0QXZhaWxhYmxlVmVoaWNsZXMueGFtbAkcA0oOAgEBIQU1DwIBCjYFQBcCAQdBBUgOAgECMEcwkAECAQwmDyofAgELOQs9HwIBCUY4RoABAgEFQzlDVQIBAw==</sads:DebugSymbol.Symbol>
+    </Sequence>
+  </this:GetAvailableVehicles.Implementation>
+</this:GetAvailableVehicles>

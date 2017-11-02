@@ -18,6 +18,5 @@ D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Un
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\bin\MySql.Data.xml
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.csprojResolveAssemblyReference.cache
-D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.csproj.CoreCompileInputs.cache
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.dll
 D:\Projects\Other\RentalCar.Service\RentalCar.Service\obj\Debug\RentalCar.Service.pdb

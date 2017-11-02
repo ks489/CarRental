@@ -1,0 +1,10 @@
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.Test.g.xaml
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.GetVehicle.g.xaml
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.GetAvailableVehicles.g.xaml
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.Create.g.xaml
+obj\Debug\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.xaml
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Test_BeforeInitializeComponentHelper.txt
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetVehicle_BeforeInitializeComponentHelper.txt
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetAvailableVehicles_BeforeInitializeComponentHelper.txt
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Create_BeforeInitializeComponentHelper.txt
+obj\Debug\RentalCar.Workflow.MyUppercaseOperatorService.Activities_upper_BeforeInitializeComponentHelper.txt

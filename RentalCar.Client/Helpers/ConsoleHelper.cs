@@ -78,6 +78,7 @@ namespace RentalCar.Client.Helpers
                 roadType = LoopNonNullInput("Vehicle Road Type:");
             }
             List<string> vehicleDetails = new List<string>();
+            return null;
         }
 
         public static string LoopNonNullInput(string displayMessage, Dictionary<string, string> allowableValues = null)

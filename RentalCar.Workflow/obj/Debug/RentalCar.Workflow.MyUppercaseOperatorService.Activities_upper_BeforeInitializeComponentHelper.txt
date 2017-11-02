@@ -1,0 +1,2 @@
+RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper

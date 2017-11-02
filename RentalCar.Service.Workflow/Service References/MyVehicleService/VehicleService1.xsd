@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RentalCar.Core.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RentalCar.Core.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:14081/Services/VehicleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/RentalCar.Core.Enums" />
+  <xs:complexType name="VehicleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrentMileage" type="xs:double" />
+      <xs:element minOccurs="0" name="NumberOfBeds" type="xs:int" />
+      <xs:element minOccurs="0" name="NumberPlate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RentalCharge" type="xs:decimal" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RentalCar.Core.Enums" minOccurs="0" name="RoadType" type="q1:RoadTypes" />
+      <xs:element minOccurs="0" name="Toilet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Under21" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VehicleID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/RentalCar.Core.Enums" minOccurs="0" name="VehicleType" type="q2:VehicleTypes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleDTO" nillable="true" type="tns:VehicleDTO" />
+  <xs:complexType name="ArrayOfVehicleDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VehicleDTO" nillable="true" type="tns:VehicleDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehicleDTO" nillable="true" type="tns:ArrayOfVehicleDTO" />
+</xs:schema>

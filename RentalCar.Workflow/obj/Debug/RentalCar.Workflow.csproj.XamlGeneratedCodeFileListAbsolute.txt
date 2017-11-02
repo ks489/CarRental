@@ -1,0 +1,11 @@
+obj\Debug\_RentalCar.Workflow.g.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.Test.g.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.GetVehicle.g.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.GetAvailableVehicles.g.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.IVehicleService.Create.g.cs
+obj\Debug\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Test_BeforeInitializeComponentHelper.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetVehicle_BeforeInitializeComponentHelper.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetAvailableVehicles_BeforeInitializeComponentHelper.cs
+obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Create_BeforeInitializeComponentHelper.cs
+obj\Debug\RentalCar.Workflow.MyUppercaseOperatorService.Activities_upper_BeforeInitializeComponentHelper.cs

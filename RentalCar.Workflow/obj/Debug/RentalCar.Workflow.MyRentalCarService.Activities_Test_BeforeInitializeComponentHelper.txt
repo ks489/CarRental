@@ -1,0 +1,2 @@
+RentalCar.Workflow.MyRentalCarService.IVehicleService.Test.g.xaml
+XamlStaticHelperNamespace._XamlStaticHelper
