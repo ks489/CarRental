@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="62a5d7a3-395a-470b-9c95-91a2026e0e54" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:17579/AvailableVehicles.xamlx" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AvailableVehicles.xsd" MetadataType="Schema" ID="5e875dd2-da8c-4beb-8cd8-a63862cf161f" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?xsd=xsd2" />
+    <MetadataFile FileName="AvailableVehicles1.xsd" MetadataType="Schema" ID="6fa6fd8e-31c7-4f87-aad3-64fb3be293b4" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?xsd=xsd1" />
+    <MetadataFile FileName="AvailableVehicles.wsdl" MetadataType="Wsdl" ID="69d86003-4a86-4626-aad5-6cb0fcef45de" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?wsdl" />
+    <MetadataFile FileName="AvailableVehicles.disco" MetadataType="Disco" ID="fdde6f5c-8886-4e6f-b103-c3050b19e86c" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?disco" />
+    <MetadataFile FileName="AvailableVehicles2.xsd" MetadataType="Schema" ID="617d6cf3-2845-4332-85d9-81529dc8eb80" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?xsd=xsd0" />
+    <MetadataFile FileName="AvailableVehicles3.xsd" MetadataType="Schema" ID="051789cb-2687-40ba-be2a-7d01ef87ea7a" SourceId="1" SourceUrl="http://localhost:17579/AvailableVehicles.xamlx?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

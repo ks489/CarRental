@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RentalCar.Core.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RentalCar.Core.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="RoadTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NULL" />
+      <xs:enumeration value="OFF_ROAD" />
+      <xs:enumeration value="DIRT_ROAD" />
+      <xs:enumeration value="NORMAL_ROAD" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RoadTypes" nillable="true" type="tns:RoadTypes" />
+  <xs:simpleType name="VehicleTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NULL" />
+      <xs:enumeration value="Campervan" />
+      <xs:enumeration value="V2WBike" />
+      <xs:enumeration value="V4WDCar" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="VehicleTypes" nillable="true" type="tns:VehicleTypes" />
+</xs:schema>

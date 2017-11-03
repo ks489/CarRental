@@ -75,6 +75,9 @@
     <Content Include="AddVehicle.xamlx">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="AvailableVehicles.xamlx">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Service References\MyRentalCarService\VehicleService.disco" />
     <None Include="Service References\MyRentalCarService\configuration91.svcinfo" />
     <None Include="Service References\MyRentalCarService\configuration.svcinfo" />

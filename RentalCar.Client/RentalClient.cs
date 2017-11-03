@@ -11,12 +11,14 @@ namespace RentalCar.Client
         MyVehicleService.IVehicleService _vehicleService;        
         MySearchVehicleWorkFlow.IService _searchVehicle;
         MyAddVehicleWorkFlow.IService _addVehicle;
+        MyAvailableVehiclesWorkFlow.IService _availableVehicles;
         #endregion
         public RentalClient()
         {
             _vehicleService = new MyVehicleService.VehicleServiceClient();
             _searchVehicle = new MySearchVehicleWorkFlow.ServiceClient();
             _addVehicle = new MyAddVehicleWorkFlow.ServiceClient();
+            _availableVehicles = new MyAvailableVehiclesWorkFlow.ServiceClient();
             RunApplication();
         }
 
@@ -72,6 +74,12 @@ namespace RentalCar.Client
                         }
                     case "c":
                         {
+                            var list = _availableVehicles.Get();
+                            foreach (var item in list)
+                            {
+                                List<string> vehicleInformation = PrintVehicleInformation(item);
+                                ConsoleHelper.PrintLine(vehicleInformation);
+                            }
                             break;
                         }
                     default:

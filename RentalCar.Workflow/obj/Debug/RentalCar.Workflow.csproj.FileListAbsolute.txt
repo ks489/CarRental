@@ -39,9 +39,3 @@ D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFi
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFiles\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.g.xaml
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\InProcessTempFiles\_RentalCar.Workflow.g.cs
 D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.csprojResolveAssemblyReference.cache
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.csproj.FileListAbsolute.txt
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Create_CompiledExpressionRoot.cs
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetAvailableVehicles_CompiledExpressionRoot.cs
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_GetVehicle_CompiledExpressionRoot.cs
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.MyRentalCarService.Activities_Test_CompiledExpressionRoot.cs
-D:\Projects\Other\RentalCar.Service\RentalCar.Workflow\obj\Debug\RentalCar.Workflow.MyUppercaseOperatorService.Activities_upper_CompiledExpressionRoot.cs

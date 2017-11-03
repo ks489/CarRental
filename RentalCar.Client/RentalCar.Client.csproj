@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\MyAvailableVehiclesWorkFlow\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\MySearchVehicleWorkFlow\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,6 +84,19 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MyAddVehicleWorkFlow\AddVehicle3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles.wsdl" />
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\MySearchVehicleWorkFlow\SearchVehicle.wsdl" />
@@ -120,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\MyAddVehicleWorkFlow\" />
+    <WCFMetadataStorage Include="Connected Services\MyAvailableVehiclesWorkFlow\" />
     <WCFMetadataStorage Include="Connected Services\MySearchVehicleWorkFlow\" />
     <WCFMetadataStorage Include="Connected Services\MyVehicleService\" />
   </ItemGroup>
@@ -164,6 +183,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\MyAddVehicleWorkFlow\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\AvailableVehicles.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyAvailableVehiclesWorkFlow\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
