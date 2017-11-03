@@ -36,7 +36,7 @@ namespace RentalCar.Service.Repositories
                 dynamicParameters.Add("@roadType", vehicle.RoadType);
                 dynamicParameters.Add("@under21", vehicle.Under21);
                 string query = "insert into vehicle (numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) values(@numberPlate, @currentMileage, @rentalCharge, @vehicleType, @toilet, @numberOfBeds, @roadType, @under21)";
-                rows = db.Execute("usp_Reports_CreateTag", dynamicParameters);
+                rows = db.Execute(query, dynamicParameters);
             }
 
             return rows;
