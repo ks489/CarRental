@@ -8,9 +8,10 @@ namespace RentalCar.Core.Enums
 {
     public enum VehicleTypes
     {
-        NULL,
-        V2WBike,
-        V4WDCar,
-        Campervan,
+        NULL = 0,
+        Campervan = 1,
+        V2WBike = 2,
+        V4WDCar = 3,
+        
     }
 }

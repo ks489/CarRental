@@ -23,7 +23,23 @@ namespace RentalCar.Service.Repositories
         #region Repository Methods
         public int Create(VehicleDTO vehicle)
         {
-            throw new NotImplementedException();
+            int rows = 0;
+            using (IDbConnection db = _connection.GetConnection())
+            {
+                var dynamicParameters = new DynamicParameters();
+                dynamicParameters.Add("@numberPlate", vehicle.NumberPlate);
+                dynamicParameters.Add("@currentMileage", vehicle.CurrentMileage);
+                dynamicParameters.Add("@rentalCharge", vehicle.RentalCharge);
+                dynamicParameters.Add("@vehicleType", vehicle.VehicleType);
+                dynamicParameters.Add("@toilet", vehicle.Toilet);
+                dynamicParameters.Add("@numberOfBeds", vehicle.NumberOfBeds);
+                dynamicParameters.Add("@roadType", vehicle.RoadType);
+                dynamicParameters.Add("@under21", vehicle.Under21);
+                string query = "insert into vehicle (numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21) values(@numberPlate, @currentMileage, @rentalCharge, @vehicleType, @toilet, @numberOfBeds, @roadType, @under21)";
+                rows = db.Execute("usp_Reports_CreateTag", dynamicParameters);
+            }
+
+            return rows;
         }
 
         public IEnumerable<VehicleDTO> GetAvailable()

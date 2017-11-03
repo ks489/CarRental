@@ -6,7 +6,7 @@ namespace RentalCar.Core.Models
     public class V4WDCar : Vehicle
     {
         [DataMember]
-        public RoadTypes RoadType { get; set; }
+        public RoadTypes? RoadType { get; set; }
 
         public string Which_Road()
         {

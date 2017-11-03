@@ -8,7 +8,7 @@ namespace RentalCar.Client
     public class RentalClient
     {
         #region Private Variables
-        MyVehicleService.IVehicleService _vehicleService;
+        MyVehicleService.IVehicleService _vehicleService;        
         MySearchVehicleWorkFlow.IService _searchVehicle;
         MyAddVehicleWorkFlow.IService _addVehicle;
         #endregion
@@ -65,6 +65,8 @@ namespace RentalCar.Client
                     case "b":
                         {
                             VehicleDTO vehicle = ConsoleHelper.NewVehicleMenu();
+                            int addResult = _addVehicle.Add(vehicle);
+
                             string lol = "";
                             break;
                         }

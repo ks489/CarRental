@@ -23,31 +23,31 @@ namespace RentalCar.Workflow.MyRentalCarService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private double CurrentMileageField;
+        private System.Nullable<double> CurrentMileageField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int NumberOfBedsField;
+        private System.Nullable<int> NumberOfBedsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NumberPlateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal RentalChargeField;
+        private System.Nullable<decimal> RentalChargeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private RentalCar.Workflow.MyRentalCarService.RoadTypes RoadTypeField;
+        private System.Nullable<RentalCar.Workflow.MyRentalCarService.RoadTypes> RoadTypeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool ToiletField;
+        private System.Nullable<bool> ToiletField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool Under21Field;
+        private System.Nullable<bool> Under21Field;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string VehicleIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private RentalCar.Workflow.MyRentalCarService.VehicleTypes VehicleTypeField;
+        private System.Nullable<RentalCar.Workflow.MyRentalCarService.VehicleTypes> VehicleTypeField;
         
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -59,7 +59,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public double CurrentMileage {
+        public System.Nullable<double> CurrentMileage {
             get {
                 return this.CurrentMileageField;
             }
@@ -72,7 +72,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int NumberOfBeds {
+        public System.Nullable<int> NumberOfBeds {
             get {
                 return this.NumberOfBedsField;
             }
@@ -98,7 +98,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal RentalCharge {
+        public System.Nullable<decimal> RentalCharge {
             get {
                 return this.RentalChargeField;
             }
@@ -111,7 +111,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public RentalCar.Workflow.MyRentalCarService.RoadTypes RoadType {
+        public System.Nullable<RentalCar.Workflow.MyRentalCarService.RoadTypes> RoadType {
             get {
                 return this.RoadTypeField;
             }
@@ -124,7 +124,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Toilet {
+        public System.Nullable<bool> Toilet {
             get {
                 return this.ToiletField;
             }
@@ -137,7 +137,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Under21 {
+        public System.Nullable<bool> Under21 {
             get {
                 return this.Under21Field;
             }
@@ -163,7 +163,7 @@ namespace RentalCar.Workflow.MyRentalCarService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public RentalCar.Workflow.MyRentalCarService.VehicleTypes VehicleType {
+        public System.Nullable<RentalCar.Workflow.MyRentalCarService.VehicleTypes> VehicleType {
             get {
                 return this.VehicleTypeField;
             }
@@ -210,13 +210,13 @@ namespace RentalCar.Workflow.MyRentalCarService {
         NULL = 0,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        V2WBike = 1,
+        Campervan = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        V4WDCar = 2,
+        V2WBike = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Campervan = 3,
+        V4WDCar = 3,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]

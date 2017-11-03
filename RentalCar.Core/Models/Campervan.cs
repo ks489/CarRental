@@ -7,8 +7,8 @@ namespace RentalCar.Core.Models
 {
     public class Campervan : Vehicle
     {
-        public bool Toilet { get; set; }
-        public int NumberOfBeds { get; set; }
+        public bool? Toilet { get; set; }
+        public int? NumberOfBeds { get; set; }
 
         public string Get_Equipment()
         {

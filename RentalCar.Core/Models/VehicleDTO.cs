@@ -16,18 +16,18 @@ namespace RentalCar.Core.Models
         [DataMember]
         public string NumberPlate { get; set; }
         [DataMember]
-        public double CurrentMileage { get; set; }
+        public double? CurrentMileage { get; set; }
         [DataMember]
-        public decimal RentalCharge { get; set; }
+        public decimal? RentalCharge { get; set; }
         [DataMember]
-        public bool Toilet { get; set; }
+        public bool? Toilet { get; set; }
         [DataMember]
-        public int NumberOfBeds { get; set; }
+        public int? NumberOfBeds { get; set; }
         [DataMember]
-        public bool Under21 { get; set; }
+        public bool? Under21 { get; set; }
         [DataMember]
-        public RoadTypes RoadType { get; set; }
+        public RoadTypes? RoadType { get; set; }
         [DataMember]
-        public VehicleTypes VehicleType { get; set; }
+        public VehicleTypes? VehicleType { get; set; }
     }
 }

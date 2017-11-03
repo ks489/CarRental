@@ -60,7 +60,7 @@ namespace RentalCar.Client.Helpers
                 Dictionary<string, string> toiletChoices = new Dictionary<string, string>();
                 toiletChoices.Add("true", "Has Toilet");
                 toiletChoices.Add("false", "No Toilet");                
-                toilet = LoopNonNullInput("Vehicle Toilet:");
+                toilet = LoopNonNullInput("Vehicle Toilet:", toiletChoices);
                 numberOfBeds = LoopNonNullInput("Number of Beds");
             }
             else if (vehicleType.ToLower().Equals("2"))
@@ -68,26 +68,26 @@ namespace RentalCar.Client.Helpers
                 Dictionary<string, string> under21Choices = new Dictionary<string, string>();
                 under21Choices.Add("true", "Under 21");
                 under21Choices.Add("false", "20 and Over");
-                under21 = LoopNonNullInput("Vehicle Under 21:");
+                under21 = LoopNonNullInput("Vehicle Under 21:", under21Choices);
             }
             else if (vehicleType.ToLower().Equals("3"))
             {
                 Dictionary<string, string> roadTypesChoices = new Dictionary<string, string>();
                 roadTypesChoices.Add("1", "Off Roads");
-                roadTypesChoices.Add("2", "First Roads");
+                roadTypesChoices.Add("2", "Dirt Roads");
                 roadTypesChoices.Add("3", "Normal Roads");
-                roadType = LoopNonNullInput("Vehicle Road Type:");
+                roadType = LoopNonNullInput("Vehicle Road Type:", roadTypesChoices);
             }
             VehicleDTO vehicle = new VehicleDTO()
             {
-                CurrentMileage = currentMileage == null ? 0 : Double.Parse(currentMileage),
-                NumberOfBeds = Int32.Parse(numberOfBeds),
+                CurrentMileage = currentMileage == null ? (double?)null : Double.Parse(currentMileage),
+                NumberOfBeds = numberOfBeds == null ? (int?)null : Int32.Parse(numberOfBeds),
                 NumberPlate = numberPlate,
-                RentalCharge = Decimal.Parse(rentalCharge),
-                RoadType = (RoadTypes)Enum.Parse(typeof(RoadTypes), roadType),
-                Toilet = bool.Parse(toilet),
-                Under21 = bool.Parse(under21),
-                VehicleType = (VehicleTypes)Enum.Parse(typeof(VehicleTypes), vehicleType)
+                RentalCharge = rentalCharge == null ? (decimal?)null : Decimal.Parse(rentalCharge),
+                RoadType = roadType == null ? (RoadTypes?)null : (RoadTypes)Enum.Parse(typeof(RoadTypes), roadType),
+                Toilet = toilet == null ? (bool?)null : bool.Parse(toilet),
+                Under21 = under21 == null ? (bool?)null : bool.Parse(under21),
+                VehicleType = vehicleType == null ? (VehicleTypes?)null : (VehicleTypes)Enum.Parse(typeof(VehicleTypes), vehicleType)
             };
             return vehicle;
         }

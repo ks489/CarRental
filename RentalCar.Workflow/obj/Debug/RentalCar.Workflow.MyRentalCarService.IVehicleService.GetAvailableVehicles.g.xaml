@@ -32,7 +32,7 @@
           <OutArgument x:TypeArguments="rwm:GetAvailableVehiclesResponse">
             <VariableReference x:TypeArguments="rwm:GetAvailableVehiclesResponse">
               <VariableReference.Variable>
-                <Variable x:TypeArguments="rwm:GetAvailableVehiclesResponse" x:Name="__ReferenceID1" Name="tempResult_1417f02a8cc843bcb9f43d72595b0cb2" />
+                <Variable x:TypeArguments="rwm:GetAvailableVehiclesResponse" x:Name="__ReferenceID1" Name="tempResult_3364bb6567a64b3e8ca9c3cc50d7685a" />
               </VariableReference.Variable>
             </VariableReference>
           </OutArgument>
@@ -43,10 +43,10 @@
           <OutArgument x:TypeArguments="rwm:VehicleDTO[]">[GetAvailableVehiclesResult]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="rwm:VehicleDTO[]">[tempResult_1417f02a8cc843bcb9f43d72595b0cb2.GetAvailableVehiclesResult]</InArgument>
+          <InArgument x:TypeArguments="rwm:VehicleDTO[]">[tempResult_3364bb6567a64b3e8ca9c3cc50d7685a.GetAvailableVehiclesResult]</InArgument>
         </Assign.Value>
       </Assign>
-      <sads:DebugSymbol.Symbol>9xC0wg3srSrSN8MNzjZi2VHGrAFEOlxQcm9qZWN0c1xPdGhlclxSZW50YWxDYXIuU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3dcU2VydmljZSBSZWZlcmVuY2VzXE15UmVudGFsQ2FyU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3cuTXlSZW50YWxDYXJTZXJ2aWNlLklWZWhpY2xlU2VydmljZS5HZXRBdmFpbGFibGVWZWhpY2xlcy54YW1sCRwDSg4CAQEhBTUPAgEKNgVAFwIBB0EFSA4CAQIwRzCQAQIBDCYPKh8CAQs5Cz0fAgEJRjhGgAECAQVDOUNVAgED</sads:DebugSymbol.Symbol>
+      <sads:DebugSymbol.Symbol>9xDB8GRIH5peQ3iVTKbrNqgprAFEOlxQcm9qZWN0c1xPdGhlclxSZW50YWxDYXIuU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3dcU2VydmljZSBSZWZlcmVuY2VzXE15UmVudGFsQ2FyU2VydmljZVxSZW50YWxDYXIuV29ya2Zsb3cuTXlSZW50YWxDYXJTZXJ2aWNlLklWZWhpY2xlU2VydmljZS5HZXRBdmFpbGFibGVWZWhpY2xlcy54YW1sCRwDSg4CAQEhBTUPAgEKNgVAFwIBB0EFSA4CAQIwRzCQAQIBDCYPKh8CAQs5Cz0fAgEJRjhGgAECAQVDOUNVAgED</sads:DebugSymbol.Symbol>
     </Sequence>
   </this:GetAvailableVehicles.Implementation>
 </this:GetAvailableVehicles>

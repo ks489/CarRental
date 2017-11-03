@@ -8,7 +8,7 @@ namespace RentalCar.Core.Models
     
     public class V2WBike : Vehicle
     {
-        public bool Under21 { get; set; }
+        public bool? Under21 { get; set; }
 
         public string Under21_Ok()
         {

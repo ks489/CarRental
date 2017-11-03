@@ -8,8 +8,8 @@ namespace RentalCar.Core.Enums
     public enum RoadTypes
     {
         NULL,
-        OFF_ROAD,
-        DIRT_ROAD,
-        NORMAL_ROAD
+        OFF_ROAD = 1,
+        DIRT_ROAD = 2,
+        NORMAL_ROAD = 3
     }
 }

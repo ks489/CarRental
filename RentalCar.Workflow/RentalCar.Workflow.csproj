@@ -132,6 +132,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <XamlAppDef Include="Service References\MyUppercaseOperatorService\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </XamlAppDef>
+  </ItemGroup>
+  <ItemGroup>
     <XamlAppDef Include="Service References\MyRentalCarService\RentalCar.Workflow.MyRentalCarService.IVehicleService.Test.xaml">
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -154,13 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <XamlAppDef Include="Service References\MyRentalCarService\RentalCar.Workflow.MyRentalCarService.IVehicleService.Create.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-      <SubType>Designer</SubType>
-    </XamlAppDef>
-  </ItemGroup>
-  <ItemGroup>
-    <XamlAppDef Include="Service References\MyUppercaseOperatorService\RentalCar.Workflow.MyUppercaseOperatorService.UpperOperatorPortType.upper.xaml">
       <Generator>MSBuild:Compile</Generator>
       <DependentUpon>Reference.svcmap</DependentUpon>
       <SubType>Designer</SubType>
