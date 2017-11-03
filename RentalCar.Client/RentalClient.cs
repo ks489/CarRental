@@ -13,6 +13,11 @@ namespace RentalCar.Client
         MyAddVehicleWorkFlow.IService _addVehicle;
         MyAvailableVehiclesWorkFlow.IService _availableVehicles;
         #endregion
+
+        /// <summary>
+        /// Constructor - Added constructor dependency injection (Without any containers) 
+        /// To add any external web services this client interacts with which are the workflow wcf services
+        /// </summary>
         public RentalClient()
         {
             _vehicleService = new MyVehicleService.VehicleServiceClient();
@@ -22,9 +27,14 @@ namespace RentalCar.Client
             RunApplication();
         }
 
+        /// <summary>
+        /// Entry point to this client's application
+        /// It will initialize and run the application
+        /// </summary>
         private void RunApplication()
         {
             bool flag = true;
+            //This will iterate the application
             while (flag)
             {
                 ConsoleHelper.PrintMenu();
@@ -41,6 +51,10 @@ namespace RentalCar.Client
             }
         }
 
+        /// <summary>
+        /// This will navigate to the correct menu selected functionality
+        /// </summary>
+        /// <param name="command">Menu Item Command</param>
         private void RunCommand(string command)
         {
             try
@@ -97,6 +111,11 @@ namespace RentalCar.Client
             }
         }
 
+        /// <summary>
+        /// Validates the user input has entered the correct menu item command and that it is of type char
+        /// </summary>
+        /// <param name="command">Menu item command</param>
+        /// <returns>Validated boolean value</returns>
         private bool ValidateCommand(string command)
         {
             char character;
