@@ -21,15 +21,15 @@ USE `vehicledatabase`;
 -- Table structure for table `rentals`
 --
 
-DROP TABLE IF EXISTS rentals;
+DROP TABLE IF EXISTS `rentals`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE rentals (
-  rentalNo int(11) NOT NULL,
-  numberPlate varchar(20) NOT NULL,
-  PRIMARY KEY (rentalNo),
-  KEY fk_rentals_numberPlate_idx (numberPlate),
-  CONSTRAINT fk_rentals_numberPlate FOREIGN KEY (numberPlate) REFERENCES vehicle (numberPlate) ON DELETE NO ACTION ON UPDATE NO ACTION
+CREATE TABLE `rentals` (
+  `rentalNo` int(11) NOT NULL,
+  `numberPlate` varchar(20) NOT NULL,
+  PRIMARY KEY (`rentalNo`),
+  KEY `fk_rentals_numberPlate_idx` (`numberPlate`),
+  CONSTRAINT `fk_rentals_numberPlate` FOREIGN KEY (`numberPlate`) REFERENCES `vehicle` (`numberPlate`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -37,10 +37,10 @@ CREATE TABLE rentals (
 -- Dumping data for table `rentals`
 --
 
-LOCK TABLES rentals WRITE;
-/*!40000 ALTER TABLE rentals DISABLE KEYS */;
-INSERT INTO rentals (rentalNo, numberPlate) VALUES (3,'NH60'),(6,'UU23KIU'),(1,'VG60HLD');
-/*!40000 ALTER TABLE rentals ENABLE KEYS */;
+LOCK TABLES `rentals` WRITE;
+/*!40000 ALTER TABLE `rentals` DISABLE KEYS */;
+INSERT INTO `rentals` VALUES (3,'NH60'),(6,'UU23KIU'),(1,'VG60HLD');
+/*!40000 ALTER TABLE `rentals` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-27 15:30:15
+-- Dump completed on 2017-11-06  9:33:51
