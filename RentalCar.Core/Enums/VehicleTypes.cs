@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace RentalCar.Core.Enums
 {
+    /// <summary>
+    /// The different type of vehicles used at the rental shop
+    /// </summary>
     public enum VehicleTypes
     {
         NULL = 0,

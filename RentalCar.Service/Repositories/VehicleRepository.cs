@@ -8,6 +8,10 @@ using Dapper;
 
 namespace RentalCar.Service.Repositories
 {
+    /// <summary>
+    /// Vehicle Repository deals with all vehicle data from the database.
+    /// This Repository uses Dapper as a lightweight Object relation mapper.
+    /// </summary>
     public class VehicleRepository : IVehicleRepository
     {
         #region Private Variables
@@ -21,6 +25,11 @@ namespace RentalCar.Service.Repositories
         }
         #endregion
         #region Repository Methods
+        /// <summary>
+        /// Create a new vehicle in the database
+        /// </summary>
+        /// <param name="vehicle">Vehicle Data Transfer Object</param>
+        /// <returns>Rows affected during insertion</returns>
         public int Create(VehicleDTO vehicle)
         {
             int rows = 0;
@@ -42,6 +51,11 @@ namespace RentalCar.Service.Repositories
             return rows;
         }
 
+        /// <summary>
+        /// This will get all available cars ready for rental.
+        /// The assumption is that if there isn't a record inside the rentals table then that vehicle is available
+        /// </summary>
+        /// <returns>List of vehicles from the database.</returns>
         public IEnumerable<VehicleDTO> GetAvailable()
         {
             IEnumerable<VehicleDTO> list;
@@ -53,6 +67,11 @@ namespace RentalCar.Service.Repositories
             return list;
         }
 
+        /// <summary>
+        /// Gets a particular vehicle based on the number plate used.
+        /// </summary>
+        /// <param name="NumberPlate">Number plate of the vehicle</param>
+        /// <returns>The vehicle object details</returns>
         public VehicleDTO Get(string NumberPlate)
         {
             VehicleDTO vehicle = null;
@@ -62,8 +81,6 @@ namespace RentalCar.Service.Repositories
                 string query = "SELECT vehicleid, numberPlate, currentMileage, rentalCharge, vehicleType, toilet, numberOfBeds, roadType, under21 FROM vehicle WHERE numberPlate = @numberPlate";
                 parameter.Add("@numberPlate", NumberPlate, DbType.String, ParameterDirection.Input);
                 vehicle = db.QueryFirstOrDefault<VehicleDTO>(query, parameter);
-                
-
             }
 
             return vehicle;

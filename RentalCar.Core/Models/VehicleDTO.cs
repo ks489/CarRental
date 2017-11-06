@@ -8,6 +8,11 @@ using System.Threading.Tasks;
 
 namespace RentalCar.Core.Models
 {
+    /// <summary>
+    /// Vehicle data transfer object used between webservices and also between clients
+    /// This is a simple aggregate root object used in the database and is a direct representation 
+    /// Of the database Vehicle table
+    /// </summary>
     [DataContract]
     public class VehicleDTO
     {

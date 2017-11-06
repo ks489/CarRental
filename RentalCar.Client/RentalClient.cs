@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 namespace RentalCar.Client
 {
+    /// <summary>
+    /// Console client application that deals with Rental Car client interaction
+    /// </summary>
     public class RentalClient
     {
         #region Private Variables
@@ -126,6 +129,13 @@ namespace RentalCar.Client
             return false;
         }
 
+        /// <summary>
+        /// This will print the vehicle information according to the vehicle type being returned
+        /// This will add all valid string information about the vehicle. Some vehicles have 
+        /// More information returned.
+        /// </summary>
+        /// <param name="vehicle">Vehicle Data Transfer Object</param>
+        /// <returns>List of string values that are used to print the vehicles details</returns>
         private List<string> PrintVehicleInformation(VehicleDTO vehicle)
         {
             List<string> information = new List<string>();

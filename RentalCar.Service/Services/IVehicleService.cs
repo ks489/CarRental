@@ -8,7 +8,9 @@ using System.Text;
 
 namespace RentalCar.Service.Services
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IVehicle" in both code and config file together.
+    /// <summary>
+    /// This provides an abstraction of all business processing and logic that calls various repositories
+    /// </summary>
     [ServiceContract]
     public interface IVehicleService
     {

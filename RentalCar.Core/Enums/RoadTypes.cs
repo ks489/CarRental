@@ -5,6 +5,9 @@ using System.Web;
 
 namespace RentalCar.Core.Enums
 {
+    /// <summary>
+    /// Type of roads 4 wheel drive cars are allowed to travel on
+    /// </summary>
     public enum RoadTypes
     {
         NULL,

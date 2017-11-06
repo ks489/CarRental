@@ -5,6 +5,9 @@ using System.Web;
 
 namespace RentalCar.Core.Models
 {
+    /// <summary>
+    /// Campervan model used at the rental agency 
+    /// </summary>
     public class Campervan : Vehicle
     {
         public bool? Toilet { get; set; }

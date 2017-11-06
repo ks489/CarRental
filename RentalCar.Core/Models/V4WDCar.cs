@@ -3,6 +3,9 @@ using System.Runtime.Serialization;
 
 namespace RentalCar.Core.Models
 {
+    /// <summary>
+    /// 4 Wheel Car used at the rental agency
+    /// </summary>
     public class V4WDCar : Vehicle
     {
         [DataMember]

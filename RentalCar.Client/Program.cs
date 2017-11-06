@@ -6,8 +6,8 @@ namespace RentalCar.Client
     {
         static void Main(string[] args)
         {
-            RentalClient rc = new RentalClient();
-            
+            //Start the client console application
+            RentalClient rc = new RentalClient();            
             Console.ReadKey();
         }
     }
